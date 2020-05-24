@@ -46,14 +46,15 @@ def tokenize(text):
     
     return clean_text
     
-def model_report(prediction, X_test, y_test):
+def model_report(prediction, y_test):
     '''
-    Function to generate classification report on the model
-    Input: prediction, test set ie X_test & y_test
-    Output: Prints the Classification report
+     Function to generate classification report on the model
+     prediction: predicted model
+     y_test: features test
+     Output: prints a classification model report by categories
     '''
     for i, col in enumerate(y_test):
-        print(col)
+        print("Feature: {}".format(col))
         print("------------------------------------------------------")
         print(classification_report(y_test[col], prediction[:, i]))
 
@@ -68,20 +69,20 @@ def build_model():
     
     # pipeline parameters
     parameters = { #'vect__ngram_range': ((1, 1), (1, 2)), 
-              'vect__max_df': (0.5, 1.0), 
+              #'vect__max_df': (0.5, 1.0),
               #'vect__max_features': (None, 5000), 
               'tfidf__use_idf': (True, False), 
-              'clf__estimator__n_estimators': [10, 10],
-              'clf__estimator__learning_rate': [1,2]}
+              'clf__estimator__n_estimators': [10, 20],
+              'clf__estimator__learning_rate': [1, 2]}
     
     cv = GridSearchCV(pipeline, param_grid=parameters)
     
     return cv
 
-def evaluate_model(model, X_test, Y_test, category_names):
+def evaluate_model(model, X_test, Y_test):
     
     model_ = model.predict(X_test)
-    model_report(model_, X_test, Y_test)
+    model_report(model_, Y_test)
 
 def save_model(model, model_filepath):
 
@@ -101,7 +102,7 @@ def main():
         model.fit(X_train, Y_train)
         
         print('Evaluating model...')
-        evaluate_model(model, X_test, Y_test, category_names)
+        evaluate_model(model, X_test, Y_test)
 
         print('Saving model...\n    MODEL: {}'.format(model_filepath))
         save_model(model, model_filepath)
