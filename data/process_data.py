@@ -3,13 +3,23 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
-    
+    '''
+    Load data we need to classify
+    :param messages_filepath: messages.csv path
+    :param categories_filepath: categories.csv path
+    :return: dataframe
+    '''
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     df = pd.merge(messages, categories, on='id')
     return df
 
 def clean_data(df):
+    '''
+    Clean data process
+    :param df: dataframe
+    :return: dataframe cleaned
+    '''
     # create a dataframe of the 36 individual category columns
     categories = df['categories'].str.split(";", expand = True)
     
@@ -40,12 +50,21 @@ def clean_data(df):
     return df
 
 def save_data(df, database_filename):
-    
+    '''
+    Save clean data into a DB
+    :param df: dataframe
+    :param database_filename: databade file name
+    :return:
+    '''
     #engine = create_engine('sqlite:///Disaster_ETL.db', encoding="utf8")
     engine = create_engine('sqlite:///{}'.format(database_filename))
     df.to_sql('messages', engine, index=False, if_exists='replace')
 
 def main():
+    '''
+    Launch the application
+    :return:
+    '''
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
