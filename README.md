@@ -1,5 +1,11 @@
 # Disaster Response Pipeline Project
 
+### Motivation:
+The purpose of the project is to build a Natural Language Processing (NLP) tool that categorize messages from Twitter, for instance, building a model for an API that classifies disaster messages.
+Using this application, an emergency worker can select the necessary resorces in function the disaster category type to help or save people.
+
+### Screenhots:
+
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
