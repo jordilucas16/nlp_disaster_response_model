@@ -24,6 +24,11 @@ Using this application, an emergency worker can select the necessary resorces in
 * Python Web App ans Data visualization
     * Flask
     * Plotty
+    
+### Install
+You can get the code by clone this repository:
+
+`git clone https://github.com/jordilucas16/disaster_response`
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
@@ -38,4 +43,4 @@ Using this application, an emergency worker can select the necessary resorces in
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3. Go to http://localhost:5000/ 
