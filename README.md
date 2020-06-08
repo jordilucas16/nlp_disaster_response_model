@@ -46,7 +46,7 @@ You can get the code by cloning this repository:
 3. Go to http://localhost:5000/ 
 
 ### Author
-Jordi Lucas
+[Jordi Lucas](https://www.linkedin.com/in/jordi-lucas-data-scientist/)
 
 ### Acknowledgements
 * Udacity for providing such a complete Data Science Nanodegree Program
