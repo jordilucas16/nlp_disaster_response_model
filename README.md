@@ -28,7 +28,7 @@ Using this application, an emergency worker can select the necessary resorces in
 ### Install
 You can get the code by cloning this repository:
 
-`git clone https://github.com/jordilucas16/disaster_response.git`
+`git clone https://github.com/jordilucas16/nlp_disaster_response_model.git`
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
