@@ -4,11 +4,26 @@
 The purpose of the project is to build a Natural Language Processing (NLP) tool that categorize messages from Twitter, for instance, building a model for an API that classifies disaster messages.
 Using this application, an emergency worker can select the necessary resorces in function the disaster category type to help or save people.
 
-### Screenhots:
+### Screenshots:
 
 ![alt text](https://github.com/jordilucas16/disaster_response/blob/master/screenshot_1.PNG)
 
 ![alt text](https://github.com/jordilucas16/disaster_response/blob/master/screenshot_2.PNG)
+
+### Dependencies:
+* Python 3.7
+* Machine Learning libraries
+    * NumPy
+    * Pandas
+    * SciKit-Learn
+    * SciPy
+* Natural Language Processing (NLP) Libraries
+    * NLTK 
+* SQLlite DB Libraries
+    * SQLAlchemy
+* Python Web App ans Data visualization
+    * Flask
+    * Plotty
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
