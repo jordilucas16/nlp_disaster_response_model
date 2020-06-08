@@ -26,9 +26,9 @@ Using this application, an emergency worker can select the necessary resorces in
     * Plotty
     
 ### Install
-You can get the code by clone this repository:
+You can get the code by cloning this repository:
 
-`git clone https://github.com/jordilucas16/disaster_response`
+`git clone https://github.com/jordilucas16/disaster_response.git`
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
@@ -44,3 +44,10 @@ You can get the code by clone this repository:
     `python run.py`
 
 3. Go to http://localhost:5000/ 
+
+### Author
+Jordi Lucas
+
+### Acknowledgements
+* Udacity for providing such a complete Data Science Nanodegree Program
+* Figure Eight for providing datasets to train the model
