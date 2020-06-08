@@ -6,6 +6,9 @@ Using this application, an emergency worker can select the necessary resorces in
 
 ### Screenhots:
 
+![alt text](https://github.com/jordilucas16/disaster_response/blob/master/screenshot_1.PNG)
+
+![alt text](https://github.com/jordilucas16/disaster_response/blob/master/screenshot_2.PNG)
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
